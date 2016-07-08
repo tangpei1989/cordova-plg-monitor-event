@@ -130,7 +130,7 @@ public class MonitorEventListener extends CordovaPlugin {
     /**
      * Creates a JSONObject with the current battery information
      *
-     * @param batteryIntent the current battery information
+     * @param moniterIntent the current battery information
      * @return a JSONObject containing the battery status information
      */
     private JSONObject getMoniterEventInfo(Intent moniterIntent) {
@@ -147,8 +147,7 @@ public class MonitorEventListener extends CordovaPlugin {
     /**
      * Updates the JavaScript side whenever the battery changes
      *
-     * @param batteryIntent the current battery information
-     * @return
+     * @param moniterIntent the current battery information
      */
     private void updateMoniterEventInfo(Intent moniterIntent) {
         sendUpdate(this.getMoniterEventInfo(moniterIntent), true);
