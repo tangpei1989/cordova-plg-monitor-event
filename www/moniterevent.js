@@ -38,7 +38,7 @@ var MoniterEvent = function() {
 };
 
 function handlers() {
-    return battery.channels.moniterevent.numHandlers;
+    return moniterevent.channels.moniterevent.numHandlers;
 }
 
 /**
@@ -49,7 +49,7 @@ function handlers() {
 MoniterEvent.onHasSubscribersChange = function() {
   // If we just registered the first handler, make sure native listener is started.
   if (this.numHandlers === 1 && handlers() === 1) {
-      exec(battery._status, battery._error, "MonitorEvent", "start", []);
+      exec(moniterevent._status, moniterevent._error, "MonitorEvent", "start", []);
   } else if (handlers() === 0) {
       exec(null, null, "MonitorEvent", "stop", []);
   }
