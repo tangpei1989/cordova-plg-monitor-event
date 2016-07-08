@@ -39,7 +39,7 @@ public class MonitorEventListener extends CordovaPlugin {
     public static final String MONITER_EVENT_NAME = "ewell.plugin.cordova.moniterevent.event_name";
     public static final String MONITER_EVENT_ARGS = "ewell.plugin.cordova.moniterevent.event_args";
 
-    public static final String MONITER_INTENT_ACTION = "ewell.plugin.cordova.moniterevent.intent_action"
+    public static final String MONITER_INTENT_ACTION = "ewell.plugin.cordova.moniterevent.intent_action";
 
     BroadcastReceiver receiver;
 
@@ -137,7 +137,7 @@ public class MonitorEventListener extends CordovaPlugin {
         JSONObject obj = new JSONObject();
         try {
             obj.put("event", moniterIntent.getStringExtra(MONITER_EVENT_NAME));
-            obj.put("args", moniterIntent.getStringArrayExtra(MONITER_EVENT_ARGS);
+            obj.put("args", moniterIntent.getStringArrayExtra(MONITER_EVENT_ARGS));
         } catch (JSONException e) {
             Log.e(LOG_TAG, e.getMessage(), e);
         }
@@ -156,8 +156,6 @@ public class MonitorEventListener extends CordovaPlugin {
 
     /**
      * Create a new plugin result and send it back to JavaScript
-     *
-     * @param connection the network info to set as navigator.connection
      */
     private void sendUpdate(JSONObject info, boolean keepCallback) {
         if (this.moniterCallbackContext != null) {
