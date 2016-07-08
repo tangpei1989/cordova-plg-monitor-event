@@ -1,0 +1,29 @@
+{
+  "name": "cordova-plg-monitor-event",
+  "version": "1.0.0",
+  "description": "General Event Monitor Interface",
+  "cordova": {
+    "id": "cordova-plg-monitor-event",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tangpei1989/cordova-plg-monitor-event"
+  },
+  "keywords": [
+    "cordova",
+    "motionevent",
+    "cordova-android"
+  ],
+  "scripts": {
+    "test": "npm run jshint",
+    "jshint": "node node_modules/jshint/bin/jshint www && node node_modules/jshint/bin/jshint src && node node_modules/jshint/bin/jshint tests"
+  },
+  "author": "Ewell R & D Department",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "jshint": "^2.6.0"
+  }
+}
